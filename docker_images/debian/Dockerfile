@@ -40,7 +40,8 @@ EXPOSE 22
 # ----------------------------------------
 # Install GitLab CI required dependencies.
 # ----------------------------------------
-ARG GITLAB_RUNNER_VERSION
+
+ENV GITLAB_RUNNER_VERSION "15.8.2"
 
 RUN curl -Lo /usr/local/bin/gitlab-runner https://gitlab-runner-downloads.s3.amazonaws.com/v${GITLAB_RUNNER_VERSION}/binaries/gitlab-runner-linux-amd64 && \
     chmod +x /usr/local/bin/gitlab-runner
